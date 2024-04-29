@@ -12,6 +12,7 @@ import menus from "./components/treeView/data";
 import SearchAutocomplete from "./components/searchAutocomplete";
 import QRCodeGenerator from "./components/qr-code-generator";
 import ScrollIndicator from "./components/scrollIndicator";
+import TabTest from "./components/custom-tabs/tab-test";
 // Correct casing for uppercase Test.jsx
 
 function App() {
@@ -23,7 +24,8 @@ function App() {
       {/* <StarRating noofstars={10} /> */}
       {/* <RandomColor/> */}
       {/* <QRCodeGenerator /> */}
-      <ScrollIndicator url='https://dummyjson.com/products?limit=100' />
+      {/* <ScrollIndicator url='https://dummyjson.com/products?limit=100' /> */}
+      <TabTest/>
     </>
   );
 }

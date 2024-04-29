@@ -1,0 +1,31 @@
+.wrapper{
+    padding: 8px;
+}
+
+.heading{
+    display: flex;
+}
+
+.tab-item{
+    color: white;
+    display: flex;
+    margin: 10px;
+    font-size: 25px;
+    margin: 20px;
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 7px;
+}
+
+.tab-item.active{
+    background-color: green;
+    color: white;
+    border-color: red;
+}
+
+.content{
+    height: 500px;
+    width: 500px;
+    font-size: large;
+    overflow: auto;
+}
