@@ -19,14 +19,10 @@ const TabTest = () => {
 
     ]
 
-    function handleClick(index){
-        console.log(index)
-    }
-
   return (
 
     <div>
-        <Tabs tabsContent={tabs} onChange={handleClick}/>
+        <Tabs tabsContent={tabs} />
     </div>
   )
 }
