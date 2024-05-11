@@ -47,8 +47,6 @@ const SearchAutocomplete = () => {
             seterror(e);
         }
         
-
-
     }
   
     console.log(searchparam)

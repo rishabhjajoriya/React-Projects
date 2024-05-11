@@ -50,6 +50,8 @@ const Accordian = () => {
                 <span>+</span>
               </div>
 
+
+<div>
               {enalbleMultipleSelection
                 ? multiple.indexOf(dataItem.id) !== -1 && (
                     <div className="content">{dataItem.answer}</div>
@@ -57,7 +59,7 @@ const Accordian = () => {
                 : selected === dataItem.id && (
                     <div className="content">{dataItem.answer}</div>
                   )}
-
+</div>
               {/* {selected === dataItem.id || multiple.indexOf(dataItem.id) !== -1 ? (
                 <div className="content">{dataItem.answer}</div>
               ) : null} */}
