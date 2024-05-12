@@ -21,11 +21,11 @@ function App() {
   return (
     <>
       {/* <ImageSlider url = {'https://picsum.photos/v2/list'} limit={'10'}/> */}
-      {/* <StarRating noofstars={10} /> */}
+      <StarRating noofstars={10} />
       {/* <RandomColor/> */}
       {/* <QRCodeGenerator /> */}
       {/* <ScrollIndicator url='https://dummyjson.com/products?limit=100' /> */}
-      <TabTest/>
+      {/* <TabTest/> */}
     </>
   );
 }
