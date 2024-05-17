@@ -15,6 +15,8 @@ import QRCodeGenerator from "./components/qr-code-generator";
 import ScrollIndicator from "./components/scrollIndicator";
 import TabTest from "./components/custom-tabs/tab-test";
 import data from './components/Accordian-2/data'
+import Autocomplete from "./components/autoCompleteTypeHead/AutoComplete";
+import TicTacToe from "./components/TicTacToe/TicTacToe";
 // Correct casing for uppercase Test.jsx
 
 function App() {
@@ -28,11 +30,12 @@ function App() {
       {/* <QRCodeGenerator /> */}
       {/* <ScrollIndicator url='https://dummyjson.com/products?limit=100' /> */}
       {/* <TabTest/> */}
-      
+{/*       
       {data && data.map((dataitem) =>{
        return <Accordian2 dataitem = {dataitem}/>
-      })}
-
+      })} */}
+     {/* <Autocomplete/> */}
+     <TicTacToe/>
     </>
   );
 }

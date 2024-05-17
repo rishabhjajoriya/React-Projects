@@ -5,7 +5,6 @@ import Suggestions from './suggestions'
 const SearchAutocomplete = () => {
     const [loading, setloading] = useState(false)
     const [users, setusers] = useState([])
-    const [error, seterror] = useState(null)
     const[searchparam,setsearchparam] = useState('');
     const [dropdown, setdropdown] = useState(false);
     const [filteredUsers, setfilteredUsers] = useState([]);
