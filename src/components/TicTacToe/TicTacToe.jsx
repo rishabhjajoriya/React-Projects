@@ -1,6 +1,6 @@
 import "./styles.css";
 import React from "react";
-import { useState,useEffect } from "react";
+import { useState, useEffect } from "react";
 
 function Square({ value, onClick }) {
   return (
@@ -13,10 +13,10 @@ function Square({ value, onClick }) {
 export default function TicTacToe() {
   const [squares, setsquares] = useState(Array(9).fill(""));
   const [IsXturn, setIsXturn] = useState(true);
-  const [Status, setStatus] = useState('');
+  const [Status, setStatus] = useState("");
   function handleClick(currentIdx) {
     let cpySquares = [...squares];
-    if (getWinner(cpySquares) || cpySquares[currentIdx]) return;
+    if (getWinner(cpySquares) ||cpySquares[currentIdx]) return;
     cpySquares[currentIdx] = IsXturn ? "X" : "O";
     setIsXturn(!IsXturn);
     setsquares(cpySquares);
@@ -25,21 +25,20 @@ export default function TicTacToe() {
   // 0 1 2
   // 3 4 5
   // 6 7 8
- function handleRestart(){
+  function handleRestart() {
     setIsXturn(true);
-    setsquares(Array(9).fill(''));
- }
+    setsquares(Array(9).fill(""));
+  }
   useEffect(() => {
-    if(!getWinner(squares) && squares.every(item => item !== "")){
-        setStatus(`Match is draw. Please restart the game.`)
-    }else if(getWinner(squares)){
-      setStatus(`Winner is ${getWinner(squares)}. Please restart the game.`)
-    } else{
-        setStatus(`Next turn is of ${IsXturn ? 'X' : 'O'}`);
+    if (!getWinner(squares) && squares.every((item) => item !== "")) {
+      setStatus(`Match is draw. Please restart the game.`);
+    } else if (getWinner(squares)) {
+      setStatus(`Winner is ${getWinner(squares)}. Please restart the game.`);
+    } else {
+      setStatus(`Next turn is of ${IsXturn ? "X" : "O"}`);
     }
-   
-  }, [squares,IsXturn])
-  
+  }, [squares, IsXturn]);
+
   function getWinner(squares) {
     const winningPatterns = [
       [0, 1, 2],
@@ -83,10 +82,8 @@ export default function TicTacToe() {
         <Square value={squares[7]} onClick={() => handleClick(7)} />
         <Square value={squares[8]} onClick={() => handleClick(8)} />
       </div>
-     <h1>
-     {Status}
-     </h1>
-     <button onClick={handleRestart} >Restart the game!</button>
+      <h1>{Status}</h1>
+      <button onClick={handleRestart}>Restart the game!</button>
     </div>
   );
 }
