@@ -15,7 +15,7 @@ export default function TicTacToe() {
   const [IsXturn, setIsXturn] = useState(true);
   const [Status, setStatus] = useState("");
   function handleClick(currentIdx) {
-    let cpySquares =[...squares];
+    let cpySquares = [...squares];
     if (getWinner(cpySquares) ||cpySquares[currentIdx]) return;
     cpySquares[currentIdx] = IsXturn ? "X" : "O";
     setIsXturn(!IsXturn);
